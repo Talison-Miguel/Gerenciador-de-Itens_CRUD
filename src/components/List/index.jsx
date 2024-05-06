@@ -54,7 +54,7 @@ export function List({data, setData}) {
                         paginationModel: { page: 0, pageSize: 9 },
                     },
                     }}
-                    pageSizeOptions={[5, 9, 10]}
+                    pageSizeOptions={[5, 8, 10, 12]}
                 />
             </Box>
         </section>
