@@ -77,7 +77,6 @@ Para copiar o projeto, utilize os comandos:
 </h4>
 
 <p align="center">
-
   <a href="https://www.linkedin.com/in/talison-miguel/">
     <img alt="Tálison Miguel Amancio" src="https://www.linkedin.com/in/talison-miguel/">
   </a>
