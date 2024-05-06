@@ -1,6 +1,6 @@
 import './style.css'
 
-import * as React from 'react';
+import { useState, Fragment } from 'react';
 import P from 'prop-types';
 import axios from 'axios';
 
@@ -17,12 +17,12 @@ import TextField from '@mui/material/TextField';
 export function EditDeleteActions({ id, onDelete, data, setData }) {
     const isMobile = useMediaQuery('(max-width: 780px)');
 
-    const [open, setOpen] = React.useState(false);
-    const [itemEdit, setItemEdit] = React.useState({});
+    const [open, setOpen] = useState(false);
+    const [itemEdit, setItemEdit] = useState({});
 
-    const [ clientComplete, setClientComplete ] = React.useState(false)
-    const [ productComplete, setProductComplete ] = React.useState(false)
-    const [ ordersComplete, setOrdersComplete ] = React.useState(false)
+    const [ clientComplete, setClientComplete ] = useState(false)
+    const [ productComplete, setProductComplete ] = useState(false)
+    const [ ordersComplete, setOrdersComplete ] = useState(false)
 
     function errorComplete(func) {
         func(true)
@@ -31,20 +31,20 @@ export function EditDeleteActions({ id, onDelete, data, setData }) {
         }, 2500);
     }
 
-    function validarInputs(cliente, produto, quantidade) {
-        if(cliente.trim() === '') errorComplete(setClientComplete)
-        if(produto.trim() === '') errorComplete(setProductComplete)
-        if(quantidade === '0' || quantidade === '') errorComplete(setOrdersComplete)
+    function validarInputs(client, product, orders) {
+        if(client.trim() === '') errorComplete(setClientComplete)
+        if(product.trim() === '') errorComplete(setProductComplete)
+        if(orders === '0' || orders === '') errorComplete(setOrdersComplete)
 
-        if (cliente.trim() === '') {
+        if (client.trim() === '') {
             return 'O campo de cliente não pode estar vazio.';
         }
     
-        if (produto.trim() === '') {
+        if (product.trim() === '') {
             return 'O campo de produto não pode estar vazio.';
         }
     
-        if (quantidade === '0' || quantidade === '') {
+        if (orders === '0' || orders === '') {
             return 'A quantidade não pode ser zero.';
         }
         
@@ -98,7 +98,7 @@ export function EditDeleteActions({ id, onDelete, data, setData }) {
 
     return (
         <div className='containerButtons'>
-            <React.Fragment>
+            <Fragment>
                 <ButtonSet variant={isMobile ? "text" : "outlined"} sx={{  padding: '4px 10px', display: 'flex', gap: '10px', height: '36px', fontSize: '10px', width: '110px' }} onClick={handleClickOpen}>
                     <EditIcon sx={[{ fontSize: '26px', color: '#1976d2' }, isMobile && {fontSize: '20px'}]}/>
                     <span className='btnText'>Editar</span>
@@ -132,7 +132,7 @@ export function EditDeleteActions({ id, onDelete, data, setData }) {
                         <Button onClick={handleEdit} autoFocus>Salvar </Button>
                     </DialogActions>
                 </Dialog>
-            </React.Fragment>
+            </Fragment>
         </div>
     )
 }

@@ -16,9 +16,9 @@ import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOu
 
 export function AlertDialog({ data, setData }) {
     const [open, setOpen] = useState(false);
-	const [cliente, setCliente] = useState('');
-    const [produto, setProduto] = useState('');
-    const [quantidade, setQuantidade] = useState(0);
+	const [client, setClient] = useState('');
+    const [product, setProduct] = useState('');
+    const [orders, setOrders] = useState(0);
     
     const [ clientComplete, setClientComplete ] = useState(false)
     const [ productComplete, setProductComplete ] = useState(false)
@@ -31,21 +31,21 @@ export function AlertDialog({ data, setData }) {
         }, 2500);
     }
 
-    function validarInputs(cliente, produto, quantidade) {
+    function validarInputs(client, product, orders) {
 
-        if(cliente.trim() === '') errorComplete(setClientComplete)
-        if(produto.trim() === '') errorComplete(setProductComplete)
-        if(quantidade === '0' || quantidade === '' || Number(quantidade) < 1) errorComplete(setOrdersComplete)
+        if(client.trim() === '') errorComplete(setClientComplete)
+        if(product.trim() === '') errorComplete(setProductComplete)
+        if(orders === '0' || orders === '' || Number(orders) < 1) errorComplete(setOrdersComplete)
 
-        if (cliente.trim() === '') {
+        if (client.trim() === '') {
             return 'O campo de cliente não pode estar vazio.';
         }
     
-        if (produto.trim() === '') {
+        if (product.trim() === '') {
             return 'O campo de produto não pode estar vazio.';
         }
     
-        if (quantidade === '0' || quantidade === '' || Number(quantidade) < 1) {
+        if (orders === '0' || orders === '' || Number(orders) < 1) {
             return 'A quantidade não pode ser zero.';
         }
     
@@ -61,13 +61,13 @@ export function AlertDialog({ data, setData }) {
     };
     
     const handleAddItem = async () => {
-        const erro = validarInputs(cliente, produto, quantidade);
+        const erro = validarInputs(client, product, orders);
         if (erro) {
             console.error('Erro ao adicionar o item:', erro);
             return;
         }
 
-		const newItem = { "id": uuidv4(), "product": produto, "client": cliente, "orders": Number(quantidade) };
+		const newItem = { "id": uuidv4(), "product": product, "client": client, "orders": Number(orders) };
 		const newData = [...data, newItem];
 
 		setData(newData);
@@ -79,9 +79,9 @@ export function AlertDialog({ data, setData }) {
         }
 
 		setOpen(false);
-        setCliente('')
-        setProduto('')
-        setQuantidade('0')
+        setClient('')
+        setProduct('')
+        setOrders('0')
 	}
 
     return (
@@ -100,12 +100,12 @@ export function AlertDialog({ data, setData }) {
                     {"Adicionar Pedido"}
                 </DialogTitle>
                 <DialogContent>
-                    <TextField id="outlined-basic" label="Cliente" variant="outlined" sx={{ marginTop: '14px', width: '100%' }} onChange={(e) => setCliente(e.target.value)} error={clientComplete}/>
-                    <TextField id="outlined-basic" label="Produto" variant="outlined" sx={{ marginTop: '14px', width: '100%' }} onChange={(e) => setProduto(e.target.value)} error={productComplete}/>
+                    <TextField id="outlined-basic" label="Cliente" variant="outlined" sx={{ marginTop: '14px', width: '100%' }} onChange={(e) => setClient(e.target.value)} error={clientComplete}/>
+                    <TextField id="outlined-basic" label="Produto" variant="outlined" sx={{ marginTop: '14px', width: '100%' }} onChange={(e) => setProduct(e.target.value)} error={productComplete}/>
                     <TextField 
                         id="outlined-basic" label="Quantidade" type='number' variant="outlined" 
                         sx={{ marginTop: '14px', width: '100%' }} 
-                        onChange={(e) => setQuantidade(e.target.value)} 
+                        onChange={(e) => setOrders(e.target.value)} 
                         error={ordersComplete}
                     />
                 </DialogContent>

@@ -14,19 +14,19 @@
     },
     {
       "id": "4a8af04c-0bab-42ed-a797-658f0b4f5669",
-      "product": "Pc",
+      "product": "Computador",
       "client": "Pedro",
       "orders": "21"
     },
     {
       "id": "1ca19380-003d-42f6-bc8e-6940ce59c4cd",
-      "product": "Cama",
+      "product": "Celular",
       "client": "Jorge",
       "orders": "4"
     },
     {
       "id": "efb5cc7d-30d5-4b3d-966a-f45fc2fab590",
-      "product": "Pc",
+      "product": "Computador",
       "client": "Tálison",
       "orders": "6"
     },
@@ -62,7 +62,7 @@
     },
     {
       "id": "25f2e15c-090c-4be8-b6f3-18f7b166fcf9",
-      "product": "Gabinet",
+      "product": "Gabinete",
       "client": "Josuel",
       "orders": 17
     }
