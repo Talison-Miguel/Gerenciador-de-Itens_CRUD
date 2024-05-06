@@ -1,0 +1,9 @@
+.listContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.customDataGrid .MuiDataGrid-viewport {
+    text-align: center;
+}

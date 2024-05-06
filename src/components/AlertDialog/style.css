@@ -1,0 +1,12 @@
+.textInputs {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+@media (max-width: 780px) {
+    .btnTextHeader {
+      font-size: 12px;
+    }
+  }

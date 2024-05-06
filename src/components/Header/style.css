@@ -1,0 +1,50 @@
+.header {
+    background-color: #435d7d;
+}
+
+.titleList {
+    color: white;
+    font-size: 32px;
+    font-family: "Lilita One", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ItensMenu {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+@media (max-width: 1220px) {
+    .ItensMenu {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    .ItensMenu {
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+
+    .titleList {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 620px) {
+    .ItensMenu {
+        justify-content: center;
+        padding: 50px 0;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .titleList {
+        text-align: center;
+    }
+}

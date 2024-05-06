@@ -1,0 +1,27 @@
+.containerButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.containerButtons button {
+    max-width: 100%;    
+}
+
+@media (max-width: 780px) {
+    
+    .btnText {
+        display: none;
+    }
+
+    .containerButtons {
+        gap: 0;
+    }
+    
+    .containerButtons > button {
+        padding: 0;
+    } 
+}

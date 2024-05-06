@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "id": "96229c22-603f-471e-9f69-e612c3019c4d",
+      "product": "Cadeira ",
+      "client": "Italo",
+      "orders": "13"
+    },
+    {
+      "id": "56838931-dc05-4c66-a307-41a226babcd6",
+      "product": "Mesa",
+      "client": "Edu",
+      "orders": "11"
+    },
+    {
+      "id": "4a8af04c-0bab-42ed-a797-658f0b4f5669",
+      "product": "Pc",
+      "client": "Pedro",
+      "orders": "21"
+    },
+    {
+      "id": "1ca19380-003d-42f6-bc8e-6940ce59c4cd",
+      "product": "Cama",
+      "client": "Jorge",
+      "orders": "4"
+    },
+    {
+      "id": "efb5cc7d-30d5-4b3d-966a-f45fc2fab590",
+      "product": "Pc",
+      "client": "Tálison",
+      "orders": "6"
+    },
+    {
+      "id": "cc9f70a0-356a-433d-9f1d-7d075167d60f",
+      "product": "Placa De Video",
+      "client": "Josh",
+      "orders": 7
+    },
+    {
+      "id": "2d07c020-1c27-4e9e-a346-ade86619af93",
+      "product": "Teclado",
+      "client": "Jaime",
+      "orders": 22
+    },
+    {
+      "id": "7944edcc-463e-4d00-b3b7-78a47eb388ae",
+      "product": "Monitor",
+      "client": "Jon",
+      "orders": 20
+    },
+    {
+      "id": "2c64a0ff-83c7-4d9c-ad4e-cdb8ca606ccd",
+      "product": "Placa Mãe",
+      "client": "José",
+      "orders": 30
+    },
+    {
+      "id": "e9a2e5a5-a8da-4636-b612-099321421261",
+      "product": "Webcam",
+      "client": "Miguel",
+      "orders": 29
+    },
+    {
+      "id": "25f2e15c-090c-4be8-b6f3-18f7b166fcf9",
+      "product": "Gabinet",
+      "client": "Josuel",
+      "orders": 17
+    }
+  ]
+}
