@@ -51,7 +51,7 @@ export function List({data, setData}) {
                     columns={columns}
                     initialState={{
                     pagination: {
-                        paginationModel: { page: 0, pageSize: 9 },
+                        paginationModel: { page: 0, pageSize: 8 },
                     },
                     }}
                     pageSizeOptions={[5, 8, 10, 12]}
